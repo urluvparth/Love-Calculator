@@ -1,16 +1,9 @@
-# ❤️ Love Calculator ❤️
+# Love Calculator
 
 [![Website](https://img.shields.io/badge/Website-Live-green)](https://yourusername.github.io/love-calculator/)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 A beautiful and fun Love Calculator web app made with HTML, CSS and JavaScript.
-
-## Features
-- Enter any two names to check love compatibility
-- Beautiful animated heart and gradient design
-- Fully responsive works on all devices
-- Fun percentage calculation
-- Clean and professional UI
 
 ## 🚀 How to Use
 1. Open `index.html` in browser
@@ -20,8 +13,8 @@ A beautiful and fun Love Calculator web app made with HTML, CSS and JavaScript.
 5. See your love percentage result!
 
 ## 📸 Screenshots
-![Screenshot 1](screenshots/screen1.png)
-![Screenshot 2](screenshots/screen2.png)
+![Screenshot 1](https://i.ibb.co/dw3sSgr3/Img2url-bot.jpg)
+![Screenshot 2](https://i.ibb.co/SXDpbPB9/Img2url-bot.jpg)
 
 ## 🔧 Technologies Used
 - HTML5
