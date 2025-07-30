@@ -16,14 +16,6 @@ A beautiful and fun Love Calculator web app made with HTML, CSS and JavaScript.
 ![Screenshot 1](https://i.ibb.co/dw3sSgr3/Img2url-bot.jpg)
 ![Screenshot 2](https://i.ibb.co/SXDpbPB9/Img2url-bot.jpg)
 
-## 🔧 Technologies Used
-- HTML5
-- CSS3
-- JavaScript
-
-## 📜 License
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
-
 ---
 
 Made with ❤️ by [@urluvparth](https://t.me/urluvparth)
