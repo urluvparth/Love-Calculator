@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator | Find Your Perfect Match</title>
+    <style>
+        :root {
+            --primary: #e91e63;
+            --secondary: #ff80ab;
+            --light: #fff9fb;
+            --dark: #880e4f;
+            --text: #333333;
+        }
+        
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            /* Background image placeholder - replace with your image */
+            background-image: url('your-image-url.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.9);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 30px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            color: var(--dark);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .calculator-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .input-group {
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-sizing: border-box;
+        }
+        
+        input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(233, 30, 99, 0.2);
+        }
+        
+        input::placeholder {
+            color: #aaa;
+        }
+        
+        button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            margin-top: 10px;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        button:hover {
+            background-color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .result {
+            margin-top: 30px;
+            padding: 30px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            display: none;
+            animation: slideUp 0.5s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .percentage {
+            font-size: 72px;
+            font-weight: 800;
+            margin: 20px 0;
+            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+        
+        .names {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .message {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        .heart {
+            font-size: 40px;
+            display: block;
+            margin-bottom: 10px;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .creator {
+            margin-top: 20px;
+            font-style: italic;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .calculator-box {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .percentage {
+                font-size: 60px;
+            }
+            
+            .names {
+                font-size: 20px;
+            }
+            
+            .message {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            input {
+                padding: 12px;
+            }
+            
+            button {
+                padding: 12px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay">
+        <div class="container">
+            <h1>Love Calculator</h1>
+            <p class="subtitle">Find out how compatible you are with your partner</p>
+            
+            <div class="calculator-box">
+                <div class="input-group">
+                    <label for="name1">Your Name</label>
+                    <input type="text" id="name1" placeholder="Enter your name">
+                </div>
+                
+                <div class="input-group">
+                    <label for="name2">Partner's Name</label>
+                    <input type="text" id="name2" placeholder="Enter your partner's name">
+                </div>
+                
+                <button onclick="calculateLove()">Calculate Love</button>
+            </div>
+            
+            <div class="result" id="result">
+                <span class="heart">❤️</span>
+                <div class="percentage" id="percentage">0%</div>
+                <div class="names" id="names"></div>
+                <p class="message" id="message"></p>
+            </div>
+            
+            <div class="creator">
+                Created By: <a href="https://t.me/urluvparth" style="text-decoration: none;">Parth</a>
+            </div>
+            
+            <footer>
+                Note: This love calculator is for entertainment purposes only. Real relationships are built on communication, trust, and mutual understanding.
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        function calculateLove() {
+            const name1 = document.getElementById('name1').value.trim();
+            const name2 = document.getElementById('name2').value.trim();
+            
+            if(!name1 || !name2) {
+                alert("Please enter both names to calculate your love compatibility");
+                return;
+            }
+            
+            // More sophisticated algorithm
+            const combined = (name1 + name2).toLowerCase().replace(/\s+/g, '');
+            let hash = 0;
+            
+            for(let i = 0; i < combined.length; i++) {
+                const char = combined.charCodeAt(i);
+                hash = ((hash << 5) - hash) + char;
+                hash |= 0; // Convert to 32bit integer
+            }
+            
+            // More balanced distribution
+            const percentage = Math.abs(hash) % 86 + 15; // Results between 15-100%
+            
+            // Display result
+            document.getElementById('percentage').textContent = percentage + '%';
+            document.getElementById('names').textContent = `${name1} ❤️ ${name2}`;
+            
+            let message = "";
+            if(percentage < 30) {
+                message = "Your compatibility is low. Relationships take work - focus on communication and shared experiences.";
+            } else if(percentage < 50) {
+                message = "Moderate compatibility. With effort and understanding, your connection can grow stronger.";
+            } else if(percentage < 75) {
+                message = "Good match! You have solid foundations for a loving relationship.";
+            } else if(percentage < 90) {
+                message = "Excellent compatibility! You share a deep connection and understanding.";
+            } else {
+                message = "Soulmates! Your bond is rare and special. Cherish this connection.";
+            }
+            
+            document.getElementById('message').textContent = message;
+            document.getElementById('result').style.display = 'block';
+            
+            // Scroll to result
+            document.getElementById('result').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
