@@ -1,20 +1,38 @@
-# Love Calculator ❤️
+# ❤️ Love Calculator ❤️
 
-A beautiful, responsive web application that calculates love compatibility between two people. Enter your name and your partner's name to discover your love percentage with fun, personalized results!
+[![Website](https://img.shields.io/badge/Website-Live-green)](https://yourusername.github.io/love-calculator/)
+[![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
+
+A beautiful and fun Love Calculator web app made with HTML, CSS and JavaScript.
 
 ## Features
-- Clean, modern design with smooth animations
-- Fully responsive - works perfectly on all devices
-- "Scientific" love calculation algorithm (for entertainment)
-- Beautiful gradient result display with pulsing heart animation
-- Professional UI with focus states and accessibility features
+- Enter any two names to check love compatibility
+- Beautiful animated heart and gradient design
+- Fully responsive works on all devices
+- Fun percentage calculation
+- Clean and professional UI
 
-## How to Use
-1. Enter your name
-2. Enter your partner's name
-3. Click "Calculate Love"
-4. View your compatibility percentage and message
+## 🚀 How to Use
+1. Open `index.html` in browser
+2. Enter first name
+3. Enter second name
+4. Click "Calculate Love" button
+5. See your love percentage result!
 
-Note: This calculator is for entertainment purposes only. Real relationships require communication and effort.
+## 📸 Screenshots
+![Screenshot 1](screenshots/screen1.png)
+![Screenshot 2](screenshots/screen2.png)
 
-Created By: @urluvparth
+## 🔧 Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+
+## 📜 License
+This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
+
+---
+
+Made with ❤️ by [@urluvparth](https://t.me/urluvparth)
+
+Note: This is just for fun, don't take results seriously!
